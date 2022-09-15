@@ -1,0 +1,456 @@
+/* https://www.youtube.com/watch?v=4pW8dICijLI&list=PL4cUxeGkcC9hH1tAjyUPZPjbj-7s200a4&index=9 */
+/* variables */
+:root {
+  --primary: #ffc636;
+  --secondary: #0a0b5b;
+}
+
+/* reset */
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* base styles */
+body {
+  background: var(--secondary);
+  overflow-x: hidden;
+  font-family: "Asap Regular";
+}
+
+.button {
+  background: none;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+}
+
+.button:hover {
+  color: #222;
+  background: var(--primary);
+}
+
+input,
+textarea {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid #9893d8;
+  color: #f2f2f2;
+}
+
+/* fonts */
+@font-face {
+  font-family: "Asap Regular";
+  src: url("../assets/fonts/static/Asap-Regular.ttf");
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #dddbff;
+  font-weight: normal;
+}
+
+p,
+a,
+li {
+  color: #9893d8;
+}
+
+h1,
+h3 {
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+h4 {
+  font-size: 1.1em;
+}
+
+.leading {
+  font-size: 1.1em;
+}
+
+/* mobile styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+.site-nav {
+  margin: 0 20px;
+}
+
+.site-nav ul {
+  display: none;
+}
+
+.site-nav h1 {
+  grid-column: 1/4;
+  grid-row: 1;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--primary);
+}
+
+#welcome {
+  padding: 0px 20px 20px 20px;
+}
+.welcome-text {
+  grid-column: 1/6;
+}
+
+.welcome-img {
+  grid-column: 6/9;
+}
+
+.welcome-img img {
+  width: 200%;
+}
+
+.welcome-text a {
+  margin: 20px 0;
+}
+
+#portafolio {
+  background-image: url(../assets/square_bg.png);
+  background-color: #1d20bb;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 30px 20px;
+}
+
+#portafolio h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.projects a {
+  grid-column: 1/9;
+  margin: 15px 0;
+  display: flex;
+}
+
+.projects a * {
+  margin: 0 25px;
+  max-width: 35%;
+  align-self: center;
+}
+
+.projects h4 {
+  color: #ed55a9da;
+}
+
+#skills {
+  padding: 30px 20px;
+  background: #0f1066;
+}
+#skills img {
+  height: 80px;
+  margin: 10px auto;
+  max-width: 100%;
+}
+#skills h3 {
+  text-align: center;
+}
+#skills ul {
+  margin: 40px 0;
+}
+
+#skills li {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  grid-column: span 4;
+  text-align: center;
+}
+
+#contact {
+  padding: 30px 20px;
+  background: #07083e;
+
+}
+#contact h3, #contact p {
+  text-align: center;
+  margin-bottom: 0;
+}
+#contact form {
+  width: 80%;
+  max-width:  400px;
+  margin: 20px auto;
+  text-align: center;
+}
+#contact input, #contact textarea{
+  width: 100%;
+  margin: 10px 0;;
+}
+#contact .button {
+  margin-top: 10px;
+}
+
+footer{
+  padding: 30px 20px;
+  background-color: #03041d;
+  background-image: url(../assets/computer_game.png);
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+footer .copyright {
+  grid-column: 1/3;
+  font-size: 0.8em;
+}
+
+footer .social{
+  grid-column: 7/9;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer li{
+  margin:  0 6px;;
+}
+
+
+footer img{
+  width: 20px;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+  .welcome-text {
+    grid-column: 1/5;
+  }
+  .welcome-img{
+    grid-column: 5/9;
+  }
+
+  .welcome-img img{
+    width: 100%;
+  }
+
+  .projects {
+    margin-top: 40px;
+  }
+
+  .projects  a{
+    grid-column: span 4;
+    display: block;
+    margin: 20px 0;
+  }
+  .projects a *{
+    max-width: 45%;
+    margin: 10px 20%;  
+  }
+  
+  .projects h4 {
+    text-align: center;
+  }
+
+  #skills{
+    padding: 25px 80px;
+  }
+  
+  footer {
+    background-size: 7%;
+  }
+
+  footer img {
+    width: 25px;
+  }
+}
+
+/* large tablets & laptops styles */
+@media screen and (min-width: 960px) {
+  body{
+    font-size: 18px;
+  }
+  
+  .grid{
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .leading {
+    margin: 20px 0;
+  }
+
+  .site-nav h1 {
+    grid-column: 1/3;
+    margin: 5px 20px;
+  }
+
+  .site-nav ul{
+    display: flex;
+    grid-column: 6/9;
+    justify-content: flex-end;
+    align-self: center;
+  }
+
+  .site-nav li{
+    margin-left: 20px;
+  }
+
+  .welcome-text {
+    align-self: center;
+  }
+
+  #welcome {
+    padding-bottom: 40px;
+  }
+
+  .projects a:nth-child(1){
+    grid-column: 1/3;
+  }
+
+  .projects a:nth-child(2){
+    grid-column: 3/5;
+    /* padding-top: 100px; */
+  }
+
+  .projects a:nth-child(3){
+    grid-column: 5/7;
+  }
+
+  .projects a:nth-child(4){
+    grid-column: 7/9;
+    /* padding-top: 100px; */
+  }
+
+  .projects a *{
+    max-width: 65%;
+    margin: 25px 25px;
+  }
+
+  #skills{
+    padding: 30px 20px;
+  }
+
+  #skills ul{
+    margin: 40px auto;
+  }
+  #skills li{
+    grid-column: span 2;
+  }
+
+  #contact {
+    padding: 20px 20px;
+  }
+
+  footer {
+    padding: 50px 20px;
+    background-size: 9%;
+  }
+  
+  footer img {
+    width: 30px;
+  }
+  
+}
+
+/* desktop style */
+@media screen and (min-width: 1200px) {
+
+  body {
+     font-size: 20px;
+  }
+
+  #welcome, #skills, #portafolio, #contact {
+    padding: 90px 0;
+  }
+  .projects a:nth-child(1){
+    grid-column: 1/2;
+  }
+
+  .projects a:nth-child(2){
+    grid-column: 3/4;
+    padding-top: 100px;
+  }
+
+  .projects a:nth-child(3){
+    grid-column: 5/6;
+  }
+
+  .projects a:nth-child(4){
+    grid-column: 7/8;
+    padding-top: 100px;
+  }
+  .projects a *{
+    max-width: 100%;
+    margin: 30px 0%;  
+  }
+
+  .button {
+    font-size: 18px;
+    padding: 18px 36px;
+  }
+
+  footer {
+    padding: 80px 0;
+    background-size: 12%;
+  }
+  footer img {
+    width: 35px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+
+  .projects a {
+    grid-column: 1/12;
+  }
+
+  .projects a:nth-child(1){
+    grid-column: 1/2;
+  }
+
+  .projects a:nth-child(2){
+    grid-column: 3/4;
+  }
+
+  .projects a:nth-child(3){
+    grid-column: 5/6;
+  }
+
+  .projects a:nth-child(4){
+    grid-column: 7/8;
+  }
+
+  .projects a *{
+    max-width: 70%;
+    margin: 30px 0%;  
+  }
+
+  .button {
+    font-size: 18px;
+    padding: 18px 36px;
+  }
+
+  footer {
+    padding: 80px 0;
+    background-size: 12%;
+  }
+  footer img {
+    width: 35px;
+  }
+}
